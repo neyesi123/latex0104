@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath} % Para el entorno align
+\usepackage{geometry} % Para ajustar márgenes si es necesario
+\geometry{a4paper, margin=1in} % Ejemplo de márgenes
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{proof}[theorem]{Demostración}
+
+\begin{document}
+\section{Teorema de Pitágoras y su Demostración Euclidiana}
+
+\begin{theorem}[Teorema de Pitágoras]
+En cualquier triángulo rectángulo, el cuadrado construido sobre la hipotenusa es igual a la suma de los cuadrados construidos sobre los catetos.
+\end{theorem}
+
+\begin{proof}
+Sea $\triangle ABC$ un triángulo rectángulo con el ángulo recto en $A$. Construyamos cuadrados sobre cada uno de sus lados: $BCED$ sobre la hipotenusa $BC$, $ABFG$ sobre el cateto $AB$, y $ACKH$ sobre el cateto $AC$.
+
+Nuestro objetivo es demostrar que el área del cuadrado $BCED$ es igual a la suma de las áreas de los cuadrados $ABFG$ y $ACKH$.
+
+Consideremos la construcción adicional: Tracemos la altura desde $A$ hasta la hipotenusa $BC$, y extendámosla hasta que corte el lado $DE$ del cuadrado $BCED$ en el punto $L$. Llamemos al punto de intersección con $BC$ como $M$. Esto divide el cuadrado $BCED$ en dos rectángulos: $BCLM$ y $MDEL$.
+
+Demostraremos que el área del rectángulo $BCLM$ es igual al área del cuadrado $ABFG$, y que el área del rectángulo $MDEL$ es igual al área del cuadrado $ACKH$.
+
+\textbf{Parte 1: Área($BCLM$) = Área($ABFG$)}
+\begin{enumerate}
+    \item Consideremos los triángulos $\triangle ABE$ y $\triangle FBC$.
+    \item $AB = FB$ (lados del cuadrado $ABFG$).
+    \item $BC = BE$ (lados del cuadrado $BCED$).
+    \item $\angle ABC = \angle FBE$ (ambos son $\angle ABC + 90^\circ$).
+    \item Por el postulado lado-ángulo-lado (SAS), $\triangle ABE \cong \triangle FBC$.
+    \item El área del triángulo $\triangle ABE$ es la mitad del área del rectángulo $BCLM$ (tienen la misma base $BE$ y la misma altura $BL$).
+    \item El área del triángulo $\triangle FBC$ es la mitad del área del cuadrado $ABFG$ (tienen la misma base $FB$ y la misma altura $AB$).
+    \item Dado que las áreas de los triángulos congruentes son iguales, el área del rectángulo $BCLM$ es igual al área del cuadrado $ABFG$.
+\end{enumerate}
+
+\textbf{Parte 2: Área($MDEL$) = Área($ACKH$)}
+\begin{enumerate}
+    \item Consideremos los triángulos $\triangle ACD$ y $\triangle KCB$.
+    \item $AC = KC$ (lados del cuadrado $ACKH$).
+    \item $BC = CD$ (lados del cuadrado $BCED$).
+    \item $\angle ACB = \angle KCD$ (ambos son $\angle ACB + 90^\circ$).
+    \item Por el postulado lado-ángulo-lado (SAS), $\triangle ACD \cong \triangle KCB$.
+    \item El área del triángulo $\triangle ACD$ es la mitad del área del rectángulo $MDEL$ (tienen la misma base $CD$ y la misma altura $DM$).
+    \item El área del triángulo $\triangle KCB$ es la mitad del área del cuadrado $ACKH$ (tienen la misma base $KC$ y la misma altura $AC$).
+    \item Dado que las áreas de los triángulos congruentes son iguales, el área del rectángulo $MDEL$ es igual al área del cuadrado $ACKH$.
+\end{enumerate}
+
+Como el área del cuadrado $BCED$ es la suma de las áreas de los rectángulos $BCLM$ y $MDEL$, y hemos demostrado que estas áreas son iguales a las áreas de los cuadrados $ABFG$ y $ACKH$ respectivamente, concluimos que:
+
+Área($BCED$) = Área($BCLM$) + Área($MDEL$) = Área($ABFG$) + Área($ACKH$).
+
+Por lo tanto, $BC^2 = AB^2 + AC^2$.
+\end{proof}
+
+\end{document}
+
